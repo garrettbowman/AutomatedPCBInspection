@@ -40,7 +40,7 @@ Make sure to adjust commanded joint positions and poses as necessary.
 
 To get started, open a terminal and type:
 
-    ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=wx250
+    ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=vx300
 
 Then change to this directory and type:
 

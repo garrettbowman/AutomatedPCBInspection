@@ -6,7 +6,7 @@
 import sys
 
 from interbotix_xs_modules.xs_robot.arm import InterbotixManipulatorXS
-from interbotix_perception_modules.pointcloud import InterbotixPointCloudInterface
+#from interbotix_perception_modules.pointcloud import InterbotixPointCloudInterface
 import numpy as np
 
 """
@@ -25,45 +25,56 @@ Then change to this directory and type:
 
 def main():
 
-
     bot = InterbotixManipulatorXS(
         robot_model='vx300',
         group_name='arm',
-        gripper_name='gripper'
-
+        gripper_name='gripper')
+        
+    #
     if (bot.arm.group_info.num_joints < 5):
         bot.core.get_logger().fatal('This script requires the robot to have at least 5 joints!')
         bot.shutdown()
         sys.exit()
 
+    mode = input("Press 1, 2 or 3")
+
     while(1):
-        input
-
-        
-
-
+        #MODE 1
+        if mode == 1:
+            bot.arm.go_to_home_pose()
 
 
-        joint_positions = [-1.0, 0.5, 0.5, 0, -0.5, 1.57]
 
 
-        bot.arm.set_ee_pose_components(x=0.3, z=0.2)
-        bot.arm.set_single_joint_position(joint_name='waist', position=np.pi/2.0)
-        bot.gripper.release()
-        bot.arm.set_ee_cartesian_trajectory(x=0.1, z=-0.16)
-        bot.gripper.grasp()
-        bot.arm.set_ee_cartesian_trajectory(x=-0.1, z=0.16)
-        bot.arm.set_single_joint_position(joint_name='waist', position=-np.pi/2.0)
-        bot.arm.set_ee_cartesian_trajectory(pitch=1.5)
-        bot.arm.set_ee_cartesian_trajectory(pitch=-1.5)
-        bot.arm.set_single_joint_position(joint_name='waist', position=np.pi/2.0)
-        bot.arm.set_ee_cartesian_trajectory(x=0.1, z=-0.16)
-        bot.gripper.release()
-        bot.arm.set_ee_cartesian_trajectory(x=-0.1, z=0.16)
-        bot.arm.go_to_home_pose()
-        bot.arm.go_to_sleep_pose()
+            mode = input("Press 1, 2 or 3")
 
-        bot.shutdown()
+        #MODE 2    
+        elif mode == 2:
+            bot.arm.go_to_home_pose()
+
+
+            mode = input("Press 1, 2 or 3")
+
+
+        #MODE 3
+        elif mode == 3:
+            bot.arm.go_to_home_pose()
+
+            joint_positions = [-1.0, 0.5, 0.5, 0, -0.5, 1.57]
+
+
+            mode = input("Press 1, 2 or 3")
+        else:
+
+            mode = input("Not a valid entry. Press 1, 2 or 3.")
+
+            if mode != 1 | 2 | 3:
+
+                print("Shutting down.")
+                bot.arm.go_to_home_pose()
+                bot.arm.go_to_sleep_pose()
+                bot.shutdown()
+
 
 
 if __name__ == '__main__':

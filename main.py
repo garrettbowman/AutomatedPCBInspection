@@ -6,6 +6,7 @@
 import sys
 
 from interbotix_xs_modules.xs_robot.arm import InterbotixManipulatorXS
+from interbotix_perception_modules.pointcloud import InterbotixPointCloudInterface
 import numpy as np
 
 """
@@ -36,7 +37,28 @@ def main():
 
 
     joint_positions = [-1.0, 0.5, 0.5, 0, -0.5, 1.57]
+    # pcl = InterbotixPointCloudInterface(node_inf=bot.core)
+    # # get the cluster positions
+    # # sort them from max to min 'x' position w.r.t. the ARM_BASE_FRAME
+    # success, clusters = pcl.get_cluster_positions(
+    #     ref_frame=ARM_BASE_FRAME,
+    #     sort_axis='x',
+    #     reverse=True
+    # )
 
+    # if success:
+    #     # pick up all the objects and drop them in a virtual basket in front of the robot
+    #     for cluster in clusters:
+    #         x, y, z = cluster['position']
+    #         print(x, y, z)
+    #         bot.arm.set_ee_pose_components(x=x, y=y, z=z+0.05, pitch=0.5)
+    #         bot.arm.set_ee_pose_components(x=x, y=y, z=z, pitch=0.5)
+    #         bot.gripper.grasp()
+    #         bot.arm.set_ee_pose_components(x=x, y=y, z=z+0.05, pitch=0.5)
+    #         bot.arm.set_ee_pose_components(x=0.3, z=0.2)
+    #         bot.gripper.release()
+    # else:
+    #     print('Could not get cluster positions.')
 
 
     #bot.arm.set_joint_positions(joint_positions)

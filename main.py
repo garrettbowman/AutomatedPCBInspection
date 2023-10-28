@@ -36,50 +36,50 @@ def main():
         bot.shutdown()
         sys.exit()
 
-    mode = input("Press 1, 2 or 3")
+    mode = input("Press 1, 2 or 3:")
 
     while(1):
         #MODE 1
         if mode == '1':
             bot.arm.go_to_home_pose()
-            joint_positions = [-0.277, 0.171, 1.2, -1.37, -1.57]
+            joint_positions = [0, 0.171, 1.2, -1.37, -1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
             #slide under?
-            joint_positions = [-0.277, 0.371, 1.2, -1.37, -1.57]
+            joint_positions = [0, 0.3, 1.2, -1.37, -1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
             #at the tray
-            joint_positions = [-0.277, 0.371, 1.125, -1.37, -1.57]
+            joint_positions = [0, 0.3, 1, -1.27, -1.57]
             bot.arm.set_joint_positions(joint_positions)
 
-            bot.arm.set_ee_cartesian_trajectory(z=0.16)
+            #Pick up and rotate
+            bot.arm.set_ee_cartesian_trajectory(z=0.1)
             bot.arm.set_single_joint_position(joint_name='waist', position=.5)
 
 
             #dropoff location
-            joint_positions = [0.5, 0.371, 1.125, -1.37, -1.57]
+            joint_positions = [1.5, 0.3, 1, -1.37, -1.57]
             bot.arm.set_joint_positions(joint_positions)
 
             #slide out
-            joint_positions = [.5, 0.171, 1.3, -1.37, -1.57]
+            joint_positions = [1.5, 0.171, 1.3, -1.37, -1.57]
             bot.arm.set_joint_positions(joint_positions)
-
             
 
 
             bot.arm.go_to_home_pose()
 
-            mode = input("Press 1, 2 or 3")
+            mode = input("Press 1, 2 or 3:")
 
         #MODE 2    
         elif mode == '2':
             bot.arm.go_to_home_pose()
 
 
-            mode = input("Press 1, 2 or 3")
+            mode = input("Press 1, 2 or 3:")
 
 
         #MODE 3
@@ -89,10 +89,10 @@ def main():
             joint_positions = [-1.0, 0.5, 0.5, 0, -0.5, 1.57]
 
 
-            mode = input("Press 1, 2 or 3")
+            mode = input("Press 1, 2 or 3:")
         else:
 
-            mode = input("Not a valid entry. Press 1, 2 or 3.")
+            mode = input("Not a valid entry. Press 1, 2 or 3:")
 
             if mode != '1' | '2' | '3':
 

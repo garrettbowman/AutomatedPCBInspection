@@ -43,27 +43,27 @@ def main():
         if mode == '1':
             bot.arm.go_to_home_pose()
             #bot.gripper.release()
-            joint_positions = [0, 0.171, 1.2, -1.37, -1.57]
+            joint_positions = [0, 0.34, 0.81, -1.03, -1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
             #slide under?
-            joint_positions = [0, 0.3, 1.2, -1.37, -1.57]
+            joint_positions = [0.28, 0.34, 0.81, -1.03, -1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
             #at the tray
-            joint_positions = [0, 0.3, 1, -1.27, -1.57]
+            joint_positions = [0.28, 0.57, 0.32, -1.03, -1.57]
             bot.arm.set_joint_positions(joint_positions)
             bot.gripper.grasp()
 
             #Pick up and rotate
-            bot.arm.set_ee_cartesian_trajectory(z=0.1)
-            bot.arm.set_single_joint_position(joint_name='waist', position=.5)
+            bot.arm.set_ee_cartesian_trajectory(z=0.3)
+            bot.arm.set_single_joint_position(joint_name='waist', position=-1.5)
 
 
             #dropoff location
-            joint_positions = [1.5, 0.3, 1, -1.37, -1.57]
+            joint_positions = [-1.6, 0.57, 0.32, -1.03, -1.57]
             bot.arm.set_joint_positions(joint_positions)
 
             #serial communication with microscope
@@ -71,7 +71,7 @@ def main():
 
             #slide out
             bot.gripper.release()
-            joint_positions = [1.5, 0.171, 1.3, -1.37, -1.57]
+            joint_positions = [-1.6, 0.34, 0.81, -1.03, -1.57]
             bot.arm.set_joint_positions(joint_positions)
             
 
@@ -82,8 +82,46 @@ def main():
 
         #MODE 2    
         elif mode == '2':
+
             bot.arm.go_to_home_pose()
-            joint_positions = [-1.0, 0.5, 0.5, 0, -0.5, 1.57]
+            #bot.gripper.release()
+            joint_positions = [0, 0.34, 0.81, -1.03, -1.57]
+            bot.arm.set_joint_positions(joint_positions)
+
+
+            #slide under?
+            joint_positions = [-0.28, 0.34, 0.81, -1.03, -1.57]
+            bot.arm.set_joint_positions(joint_positions)
+
+
+            #at the tray
+            joint_positions = [-0.28, 0.57, 0.32, -1.03, -1.57]
+            bot.arm.set_joint_positions(joint_positions)
+            bot.gripper.grasp()
+
+            #Pick up and rotate
+            bot.arm.set_ee_cartesian_trajectory(z=0.3)
+            bot.arm.set_single_joint_position(joint_name='waist', position=-1.5)
+
+
+            #dropoff location
+            joint_positions = [-1.5, 0.57, 0.32, -1.03, -1.57]
+            bot.arm.set_joint_positions(joint_positions)
+
+            #serial communication with microscope
+
+
+            #slide out
+            bot.gripper.release()
+            joint_positions = [-1.5, 0.34, 0.81, -1.03, -1.57]
+            bot.arm.set_joint_positions(joint_positions)
+            
+
+
+            
+            bot.arm.go_to_home_pose()
+            
+        
 
             mode = input("Press 1, 2 or 3:")
 

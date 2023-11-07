@@ -30,27 +30,16 @@
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Ensure hardware security.
 
-This image classification project attempts to classify images of ten species of flowers that were collected by various groups and individuals in Gainesville, Florida. Pictures 
-were taken for the following species:
 <br />
-* Garden Roses
-* Southern Magnolias
-* Lilies
-* Sunflowers
-* Orchids
-* Marigold
-* Hibiscus
-* Fire Bush
-* Pentas
-* Bougainvillea
+
 <br />
 
 <p align="center">
-    Over 125 training images of each species to be classified were amassed, as depicted in the bar graph below.
+    DFgdfgwlkjgowdfglwfdg
     <br />
     <br />
     <img src=images/training_instances.png width=432 height=288>
@@ -155,9 +144,6 @@ The following accuracy was seen when using the test set and its labels generated
 <!-- Authors -->
 ## Authors
 
-* David Moore - David.moore1@ufl.edu
-* Gunnar Fandrich - gunnarfandrich@ufl.edu
-* Marc Martorell - mmartorell@ufl.edu
 * Garrett Bowman - garrettbowman@ufl.edu
 
 Project Link: [https://github.com/EEE3773-UF-Summer2022/final-project-flour-power.git](https://github.com/EEE3773-UF-Summer2022/final-project-flour-power.git)
@@ -166,11 +152,12 @@ Project Link: [https://github.com/EEE3773-UF-Summer2022/final-project-flour-powe
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Catia Silva](https://faculty.eng.ufl.edu/catia-silva/)
+* [Patrick Craig](https://faculty.eng.ufl.edu/catia-silva/) - Mentor and advisor
+* [Catia Silva](https://faculty.eng.ufl.edu/catia-silva/) - Created readme template
 
 ## Thank you
 
-If you made it this far, thank you for reading along and possibly testing our model's performance!
+If you made it this far, thank you for reading!
 
 <br />
 <br />

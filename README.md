@@ -1,6 +1,7 @@
-<!-- PROJECT LOGO --<br />
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-  <img src="images/group_logo.png" width="300" height="300">
+  <img src="images/main.png" width="350" height="300">
 
   <h3 align="center"> AutomatedPCBInspection</h3>
 
@@ -42,7 +43,7 @@ Ensure hardware security.
     DFgdfgwlkjgowdfglwfdg
     <br />
     <br />
-    <img src=images/training_instances.png width=432 height=288>
+    <img src=images/eye.png width=432 height=288>
 </p>
 
 

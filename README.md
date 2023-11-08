@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO --<br />
 <p align="center">
-  <img src="images/group_logo.png" width="300" height="300">
+  <img src="images/main.png" width="300" height="300">
 
   <h3 align="center"> AutomatedPCBInspection</h3>
 

@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <img src="images/main.png" width="350" height="300">
+  <img src="images/main.png" width="450" height="350">
 
   <h3 align="center"> AutomatedPCBInspection</h3>
 

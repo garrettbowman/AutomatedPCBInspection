@@ -43,6 +43,17 @@ def main():
         #MODE 1
         if mode == '1':
             bot.arm.go_to_home_pose()
+            #PSEUDOCODE
+            # Assuming we have area mapped with xyz values for mapping
+            # arctan(x/y) =  radian angle in which waist joint pointed towards point
+            # need tolerance lets say +-.05 
+            # need max distance lets say x^2 + y^2 <3 OR x < 2.5ft & y < 2.5ft 
+            #
+
+
+        #MODE 2
+        if mode == '2':
+            bot.arm.go_to_home_pose()
             #bot.gripper.release()
             joint_positions = [0, 0.34, 0.81, -1.03, -1.57]
             bot.arm.set_joint_positions(joint_positions)
@@ -96,8 +107,8 @@ def main():
 
             mode = input("Press 1, 2 or 3:")
         
-        #MODE 2
-        elif mode == '2':
+        #MODE 3
+        elif mode == '3':
             bot.arm.go_to_home_pose()
             #bot.gripper.release()
             joint_positions = [0, 0.34, 0.81, -1.03, -1.57]
@@ -152,8 +163,8 @@ def main():
 
             mode = input("Press 1, 2 or 3:")
 
-        #MODE 3
-        elif mode == '3':
+        #MODE 4
+        elif mode == '4':
             bot.arm.go_to_home_pose()
 
             

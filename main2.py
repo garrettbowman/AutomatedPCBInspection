@@ -47,9 +47,36 @@ def main():
             # Assuming we have area mapped with xyz values for mapping
             # arctan(x/y) =  radian angle in which waist joint pointed towards point
             # need tolerance lets say +-.05 
-            # need max distance lets say x^2 + y^2 <3 OR x < 2.5ft & y < 2.5ft 
-            #
+            # need max distance lets say x^2 + y^2 <10 OR x < 2.5ft & y < 2.5ft 
+            # ASSUMING THE ROBOT ALREADY GRASPING TRAY HANDLE
 
+        # get the cluster positions
+        # sort them from max to min 'x' position w.r.t. the ARM_BASE_FRAME
+        success, clusters = pcl.get_cluster_positions(
+            ref_frame=ARM_BASE_FRAME,
+            sort_axis='x',
+            reverse=True
+        )
+
+        if success:
+            # Writing code for this soon but essentially 
+            # if suffiecnt space place object displacement 2/3 tray width from cluster
+            for cluster in clusters:
+                x, y, z = cluster['position']
+                print(x, y, z)
+                bot.arm.set_ee_pose_components(x=x, y=y, z=z+0.05)
+                bot.arm.set_ee_pose_components(x=x, y=y, z=z, pitch=0.5)
+                bot.gripper.grasp()
+                bot.arm.set_ee_pose_components(x=x, y=y, z=z+0.05, pitch=0.5)
+                bot.arm.set_ee_pose_components(x=0.3, z=0.2)
+                bot.gripper.release()
+        else:
+            print('Could not get cluster positions.')
+
+
+            bot.arm.go_to_home_pose()
+
+            mode = input("Press 1, 2 or 3:")
 
         #MODE 2
         if mode == '2':

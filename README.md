@@ -148,26 +148,29 @@ includes example code to run the test and train scripts detailed above.*
 <!-- Performance and Results -->
 ## Performance and Results
 
-The following accuracy was seen when using the test set and its labels generated from the --debug option with the training set
+Video Demonstration:
 
 <br />
 
 <p align="center">   
   <img src="images/classification_report.png" width="505" height="376">
+
+  https://www.youtube.com/watch?v=dQw4w9WgXcQ
 </p>
 
 <!-- Authors -->
 ## Authors
 
-* Garrett Bowman - garrettbowman@ufl.edu
+* Garrett Bowman, UF ECE - garrettbowman@ufl.edu
 
-Project Link: [https://github.com/EEE3773-UF-Summer2022/final-project-flour-power.git](https://github.com/EEE3773-UF-Summer2022/final-project-flour-power.git)
+Project Link: [https://github.com/garrettbowman/AutomatedPCBInspection.git](https://github.com/garrettbowman/AutomatedPCBInspection.git)
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Patrick Craig](https://faculty.eng.ufl.edu/catia-silva/) - Mentor and advisor
+* [Dr. Navid Asadi](https://faculty.eng.ufl.edu/catia-silva/) - Faculty Advisor
+* [Patrick Craig](https://faculty.eng.ufl.edu/catia-silva/) - Mentor
 * [Catia Silva](https://faculty.eng.ufl.edu/catia-silva/) - Created readme template
 
 ## Thank you

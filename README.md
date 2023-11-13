@@ -9,7 +9,7 @@
     Garrett Bowman's Senior Design Project
     <br />
     <br />
-    <a href="#performance-and-results">View Model Performance</a>
+    <a href="#performance-and-results">View Demonstration</a>
     <br />
   </p>
 </p>
@@ -23,7 +23,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#dependencies">Dependencies</a></li>
     <li><a href="#setup-and-usage">Setup and Usage</a></li>
-    <li><a href="#performance-and-results">Performance and Results</a></li>
+    <li><a href="#Demonstration">Demonstration</a></li>
     <li><a href="#authors">Authors</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
     <li><a href="#thank-you">Thank You</a></li>
@@ -58,6 +58,7 @@ Ensure hardware security.
  What I used but should work with other ros2 compatible versions.
 
 <br />
+
 <img src=images/ros2.png>
  I used ROS2 by following instructions specifically for Trossen X-series Robotic Arms products on Ubuntu 20.04. https://www.trossenrobotics.com/docs/interbotix_xsarms/ros_interface/software_setup.html
 
@@ -76,9 +77,7 @@ Realsense D405 camera was used for eye in hand camera but other models may work 
 
 ## Setup and Usage
 
-First, clone the repo!
-```sh
-git https://github.com/garrettbowman/AutomatedPCBInspection.git
+First, clone the repo!AutomatedPCBInspection.git
 cd AutomatedPCBInspection
 ```
 <br />
@@ -93,6 +92,8 @@ Next, copy the training imageset to the root of the project directory. The train
 [canvas](https://ufl.instructure.com/courses/455012/files/69385213/download) or found in the shared folder when working with HiperGator.
 
 <br />
+```sh
+git https://github.com/garrettbowman/
 
 To train and create the image classification model, one may run
 ```sh
@@ -153,8 +154,6 @@ Video Demonstration:
 <br />
 
 <p align="center">   
-  <img src="images/classification_report.png" width="505" height="376">
-
   https://www.youtube.com/watch?v=dQw4w9WgXcQ
 </p>
 

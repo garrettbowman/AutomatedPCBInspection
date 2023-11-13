@@ -6,7 +6,7 @@
   <h3 align="center"> AutomatedPCBInspection</h3>
 
   <p align="center">
-    Garrett Bowman's senior design project with assistance from Patrick Craig
+    Garrett Bowman's Senior Design Project
     <br />
     <br />
     <a href="#performance-and-results">View Model Performance</a>
@@ -56,7 +56,7 @@ Ensure hardware security.
 
  <img src=images/galac.jpg>
  <img src=images/ros2.png>
- <img src=images/py3.png>
+ <img src=images/py3.png width=288 height=288>
  <img src=images/realsense.png>
  
 

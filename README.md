@@ -56,7 +56,8 @@ Ensure hardware security.
 
  <img src=images/galac.jpg>
  <img src=images/ros2.png>
-
+ <img src=images/py3.png>
+ <img src=images/realsense.png>
  
 
 <!-- Setup and Usage -->

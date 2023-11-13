@@ -57,7 +57,7 @@ Ensure hardware security.
  <img src=images/galac.jpg>
  What I used but should work with other ros2 compatible versions.
  <img src=images/ros2.png>
- <img src=images/py3.png width=150 height=150>
+ <img src=images/py3.png width=100 height=100>
  <img src=images/realsense.png>
  
 

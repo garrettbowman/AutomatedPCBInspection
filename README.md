@@ -54,8 +54,8 @@ Ensure hardware security.
 
 ## Dependencies
 
- <img src=images/galac.jpg width=432 height=288>
- <img src=images/ros2.jpg width=432 height=288>
+ <img src=images/galac.jpg>
+ <img src=images/ros2.png width=432 height=288>
 
  
 

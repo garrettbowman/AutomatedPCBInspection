@@ -65,15 +65,14 @@ Ensure hardware security.
 
 First, clone the repo!
 ```sh
-git clone https://github.com/EEE3773-UF-Summer2022/final-project-flour-power.git
-cd final-project-flour-power
+git https://github.com/garrettbowman/AutomatedPCBInspection.git
+cd AutomatedPCBInspection
 ```
 <br />
 
 Next, ensure execution of the python scripts is allowed
 ```sh
-chmod u+x create_model.py
-chmod u+x evaluate_model_performance.py
+chmod u+x main.py
 ```
 <br />
 

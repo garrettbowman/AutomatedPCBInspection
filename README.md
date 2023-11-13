@@ -56,17 +56,21 @@ Ensure hardware security.
 
 <img src=images/galac.jpg>
  What I used but should work with other ros2 compatible versions.
- <br />
+
+<br />
 <img src=images/ros2.png>
  I used ROS2 by following instructions specifically for Trossen X-series Robotic Arms products on Ubuntu 20.04. https://www.trossenrobotics.com/docs/interbotix_xsarms/ros_interface/software_setup.html
-  <br />
+
+<br />
 
 <img src=images/realsense.png>
 Realsense D405 camera was used for eye in hand camera but other models may work similarly.
+
 <br />
   
 <img src=images/py3.png width=100 height=100>
-  <br />
+
+<br />
 
 <!-- Setup and Usage -->
 

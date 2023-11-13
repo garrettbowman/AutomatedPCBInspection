@@ -54,8 +54,10 @@ Ensure hardware security.
 
 ## Dependencies
 
-All necessary packages to create and test the accuracy of the image classification mentioned next only require the base packages bundled in the 
-[Anaconda](https://www.anaconda.com/) python distribution
+ <img src=images/galac.jpg width=432 height=288>
+ <img src=images/ros2.jpg width=432 height=288>
+
+ 
 
 <!-- Setup and Usage -->
 

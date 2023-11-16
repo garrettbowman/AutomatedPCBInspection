@@ -37,7 +37,7 @@ def main():
         bot.shutdown()
         sys.exit()
 
-    mode = input("Press 1, 2 or 3:")
+    mode = input("Press 1, 2, 3, 4 or 5")
 
     while(1):
         #MODE 1
@@ -54,10 +54,10 @@ def main():
             bot.arm.set_joint_positions(joint_positions)
 
 
-            # #at the tray
-            # joint_positions = [0.28, 0.57, 0.32, -1.03, -1.57]
-            # bot.arm.set_joint_positions(joint_positions)
+            # at the tray
             bot.gripper.grasp()
+
+
             # #Pick up and rotate
             bot.arm.set_ee_cartesian_trajectory(z=0.08)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
@@ -74,8 +74,6 @@ def main():
             #slide out
             bot.gripper.release()
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
-            # joint_positions = [-1.6, 0.34, 0.81, -1.03, -1.57]
-            # bot.arm.set_joint_positions(joint_positions)
             
 
             #bot.arm.go_to_home_pose()
@@ -122,10 +120,10 @@ def main():
             bot.arm.set_joint_positions(joint_positions)
 
 
-            # #at the tray
-            # joint_positions = [0.28, 0.57, 0.32, -1.03, -1.57]
-            # bot.arm.set_joint_positions(joint_positions)
+            # at the tray
             bot.gripper.grasp()
+
+
             # #Pick up and rotate
             bot.arm.set_ee_cartesian_trajectory(z=0.08)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
@@ -142,8 +140,7 @@ def main():
             #slide out
             bot.gripper.release()
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
-            # joint_positions = [-1.6, 0.34, 0.81, -1.03, -1.57]
-            # bot.arm.set_joint_positions(joint_positions)
+
             
 
             #bot.arm.go_to_home_pose()
@@ -190,13 +187,13 @@ def main():
 
         else:
 
-            mode = input("Not a valid entry. Press 1, 2 or 3:")
+            mode = input("Press 1, 2 or 3:")
 
-            if mode != 1 | 2 | 3:
+            # if mode != 1 | 2 | 3:
 
-                print("Shutting down.")
-                bot.arm.go_to_sleep_pose()
-                bot.shutdown()
+            #     print("Shutting down.")
+            #     bot.arm.go_to_sleep_pose()
+            #     bot.shutdown()
 
 
 

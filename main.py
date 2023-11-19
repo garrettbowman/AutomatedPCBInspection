@@ -39,157 +39,150 @@ def main():
         bot.shutdown()
         sys.exit()
 
-    mode = input("Press 1, 2, 3, 4 or 5")
+    mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
     while(1):
-        #MODE 1
+
+        #MODE 1 PICKUP 1
         if mode == '1':
-            #bot.arm.go_to_home_pose()
+            
+            #start of the pickup, open gripper and proceed safely to location 1
             bot.arm.go_to_sleep_pose()
             bot.gripper.release()
             joint_positions = [-0.33, 0.36, 1.36, -1.63, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
-            #slide under?
+            #slide under and grasp
             joint_positions = [-0.33, 0.4, 1.14, -1.52, 1.57]
             bot.arm.set_joint_positions(joint_positions)
-
-
-            # at the tray
             bot.gripper.grasp()
 
 
-            # #Pick up and rotate
+            #pick up and rotate
             bot.arm.set_ee_cartesian_trajectory(z=0.08)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.set_single_joint_position(joint_name='waist', position=1.28)
 
 
-            # #dropoff location
+            #dropoff location
             joint_positions = [1.28, 0.22, 0.96, -1.15, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
-            # #serial communication with microscope
-
+            #communication with microscope
 
             #slide out
             bot.gripper.release()
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
-            
-
-            #bot.arm.go_to_home_pose()
             bot.arm.go_to_sleep_pose()
 
-            mode = input("Press 1, 2 or 3:")
+            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
-        #MODE 2    
+        #MODE 2 Dropoff at Location 1
         elif mode == '2':
 
-            # pickup location
+            #start of the pickup, go to safe distance from microscope platform
             joint_positions = [1.28, 0.075, 1.31, -1.32, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
+
+            #slide under, grasp, then lift up to avoid damage
             bot.arm.set_ee_cartesian_trajectory(x=0.1)
             bot.gripper.grasp()
             bot.arm.set_ee_cartesian_trajectory(z=0.02)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
 
-            bot.arm.set_single_joint_position(joint_name='waist', position=-0.33)
 
+            #rotate to position 1, place then release
+            bot.arm.set_single_joint_position(joint_name='waist', position=-0.33)
             joint_positions = [-0.33, 0.35, 1.14, -1.42, 1.57]
             bot.arm.set_joint_positions(joint_positions)
-
             bot.gripper.release()
 
+
+            #pull back then go sleep
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
-            
             bot.arm.go_to_sleep_pose()
             
-            mode = input("Press 1, 2 or 3:")
+            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
-        #MODE 3
+        #MODE 3 PICKUP 2
         if mode == '3':
-            #bot.arm.go_to_home_pose()
+
+            #start of the pickup, open gripper and proceed safely to location 2
             bot.arm.go_to_sleep_pose()
             bot.gripper.release()
             joint_positions = [0.4, 0.36, 1.36, -1.63, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
-            #slide under?
+            #slide under and grasp
             joint_positions = [0.4, 0.4, 1.14, -1.52, 1.57]
             bot.arm.set_joint_positions(joint_positions)
-
-
-            # at the tray
             bot.gripper.grasp()
 
 
-            # #Pick up and rotate
+            #pick up and rotate
             bot.arm.set_ee_cartesian_trajectory(z=0.08)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.set_single_joint_position(joint_name='waist', position=1.28)
 
 
-            # #dropoff location
+            #dropoff location
             joint_positions = [1.28, 0.22, 0.96, -1.15, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
-            # #serial communication with microscope
+            #communication with microscope
 
 
             #slide out
             bot.gripper.release()
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
-
-            
-
-            #bot.arm.go_to_home_pose()
             bot.arm.go_to_sleep_pose()
 
-            mode = input("Press 1, 2 or 3:")
+            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
-        #MODE 4    
+        #MODE 4 Dropoff at Location 2
         elif mode == '4':
 
-            # pickup location
+            #start of the pickup, go to safe distance from microscope platform
             joint_positions = [1.28, 0.075, 1.31, -1.32, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
+
+            #slide under, grasp, then lift up to avoid damage
             bot.arm.set_ee_cartesian_trajectory(x=0.1)
             bot.gripper.grasp()
             bot.arm.set_ee_cartesian_trajectory(z=0.02)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
 
+            #rotate to position 2, place then release
             bot.arm.set_single_joint_position(joint_name='waist', position=-0.33)
-
             joint_positions = [0.4, 0.35, 1.14, -1.42, 1.57]
             bot.arm.set_joint_positions(joint_positions)
-
             bot.gripper.release()
 
+
+            #pull back then go sleep
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
-            
             bot.arm.go_to_sleep_pose()
             
-            mode = input("Press 1, 2 or 3:")
+            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
 
-        #MODE 5
+        #MODE 5 SLEEP
         elif mode == '5':
-            #bot.arm.go_to_home_pose()
 
             
             bot.arm.go_to_sleep_pose()
 
-            mode = input("Press 1, 2 or 3:")
+            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
 
 
         else:
 
-            mode = input("Press 1, 2 or 3:")
+            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
             # if mode != 1 | 2 | 3:
 

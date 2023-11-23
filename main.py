@@ -78,7 +78,7 @@ def main():
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.go_to_sleep_pose()
 
-            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
+            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
         #MODE 2 Dropoff at Location 1
         elif mode == '2':
@@ -107,7 +107,7 @@ def main():
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.go_to_sleep_pose()
             
-            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
+            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
         #MODE 3 PICKUP 2
         if mode == '3':
@@ -143,7 +143,7 @@ def main():
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.go_to_sleep_pose()
 
-            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
+            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
         #MODE 4 Dropoff at Location 2
         elif mode == '4':
@@ -170,7 +170,7 @@ def main():
             bot.arm.set_ee_cartesian_trajectory(x=-0.06)
             bot.arm.go_to_sleep_pose()
             
-            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
+            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
 
         #MODE 5 SLEEP
@@ -179,8 +179,15 @@ def main():
             
             bot.arm.go_to_sleep_pose()
 
-            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
+            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
+        #MODE 6 Gripper test
+        elif mode == '6':
+            bot.gripper.grasp()
+            bot.gripper.release()            
+            bot.arm.go_to_sleep_pose()
+
+            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
 
         else:

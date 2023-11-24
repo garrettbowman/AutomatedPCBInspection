@@ -39,9 +39,11 @@ def main():
         bot.shutdown()
         sys.exit()
 
-    mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
+
 
     while(1):
+
+        mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
         #MODE 1 PICKUP 1
         if mode == '1':
@@ -57,10 +59,11 @@ def main():
             joint_positions = [-0.33, 0.44, 1.25, -1.70, 1.57]
             bot.arm.set_joint_positions(joint_positions)
             bot.gripper.grasp()
+            time.sleep(3)
 
 
             #pick up and rotate
-            bot.arm.set_ee_cartesian_trajectory(z=0.12)
+            bot.arm.set_ee_cartesian_trajectory(z=0.15)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.set_single_joint_position(joint_name='waist', position=1.28)
 
@@ -91,8 +94,8 @@ def main():
             #slide under, grasp, then lift up to avoid damage
             bot.arm.set_ee_cartesian_trajectory(x=0.1)
             bot.gripper.grasp()
-            bot.arm.set_ee_cartesian_trajectory(z=0.01)
-            bot.arm.set_ee_cartesian_trajectory(x=-0.15)
+            bot.arm.set_ee_cartesian_trajectory(z=0.05)
+            bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.set_ee_cartesian_trajectory(z=0.1)
 
 
@@ -104,7 +107,8 @@ def main():
 
 
             #pull back then go sleep
-            bot.arm.set_ee_cartesian_trajectory(x=-0.05)
+            bot.arm.set_ee_cartesian_trajectory(x=-0.03)
+            bot.arm.set_single_joint_position(joint_name='waist', position=0.0)
             bot.arm.go_to_sleep_pose()
             
             #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
@@ -115,32 +119,34 @@ def main():
             #start of the pickup, open gripper and proceed safely to location 2
             bot.arm.go_to_sleep_pose()
             bot.gripper.release()
-            joint_positions = [0.4, 0.36, 1.36, -1.63, 1.57]
+            joint_positions = [0.403, 0.44, 1.43, -1.83, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
             #slide under and grasp
-            joint_positions = [0.4, 0.4, 1.14, -1.52, 1.57]
+            joint_positions = [0.403, 0.44, 1.25, -1.70, 1.57]
             bot.arm.set_joint_positions(joint_positions)
             bot.gripper.grasp()
+            time.sleep(3)
 
 
             #pick up and rotate
-            bot.arm.set_ee_cartesian_trajectory(z=0.08)
+            bot.arm.set_ee_cartesian_trajectory(z=0.15)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.set_single_joint_position(joint_name='waist', position=1.28)
 
 
             #dropoff location
-            joint_positions = [1.28, 0.22, 0.96, -1.15, 1.57]
+            bot.moving_time= 4.0
+            joint_positions = [1.28, 0.104, 0.969, -1.04, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
             #communication with microscope
 
-
             #slide out
             bot.gripper.release()
-            bot.arm.set_ee_cartesian_trajectory(x=-0.05)
+            bot.moving_time= 2.0
+            bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.go_to_sleep_pose()
 
             #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
@@ -149,26 +155,30 @@ def main():
         elif mode == '4':
 
             #start of the pickup, go to safe distance from microscope platform
-            joint_positions = [1.28, 0.075, 1.31, -1.32, 1.57]
+            joint_positions = [1.28, -0.127, 1.32, -1.13, 1.57]
             bot.arm.set_joint_positions(joint_positions)
 
 
             #slide under, grasp, then lift up to avoid damage
             bot.arm.set_ee_cartesian_trajectory(x=0.1)
             bot.gripper.grasp()
-            bot.arm.set_ee_cartesian_trajectory(z=0.02)
-            bot.arm.set_ee_cartesian_trajectory(x=-0.1)
+            bot.arm.set_ee_cartesian_trajectory(z=0.05)
+            bot.arm.set_ee_cartesian_trajectory(x=-0.15)
+            bot.arm.set_ee_cartesian_trajectory(z=0.03)
+
 
             #rotate to position 2, place then release
-            bot.arm.set_single_joint_position(joint_name='waist', position=-0.33)
-            joint_positions = [0.4, 0.35, 1.14, -1.42, 1.57]
+            bot.arm.set_single_joint_position(joint_name='waist', position=0.403)
+            joint_positions = [0.403, 0.44, 1.25, -1.70, 1.57]
             bot.arm.set_joint_positions(joint_positions)
             bot.gripper.release()
 
 
             #pull back then go sleep
-            bot.arm.set_ee_cartesian_trajectory(x=-0.06)
+            bot.arm.set_ee_cartesian_trajectory(x=-0.03)
+            bot.arm.set_single_joint_position(joint_name='waist', position=0.0)
             bot.arm.go_to_sleep_pose()
+            
             
             #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
@@ -190,9 +200,9 @@ def main():
             #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
 
-        else:
+        # else:
 
-            mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
+        #     mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
             # if mode != 1 | 2 | 3:
 

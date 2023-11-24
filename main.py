@@ -29,7 +29,7 @@ def main():
     bot = InterbotixManipulatorXS(
         robot_model='vx300',
         group_name='arm',
-        moving_time= 3.0,
+        moving_time= 2.0,
         #accel_time= 0.3,
         gripper_name='gripper')
         

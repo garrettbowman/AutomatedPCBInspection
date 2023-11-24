@@ -29,8 +29,8 @@ def main():
     bot = InterbotixManipulatorXS(
         robot_model='vx300',
         group_name='arm',
-        moving_time= 2.0,
-        accel_time= 0.3,
+        moving_time= 3.0,
+        #accel_time= 0.3,
         gripper_name='gripper')
         
     #
@@ -60,7 +60,7 @@ def main():
 
 
             #pick up and rotate
-            bot.arm.set_ee_cartesian_trajectory(z=0.08)
+            bot.arm.set_ee_cartesian_trajectory(z=0.12)
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.set_single_joint_position(joint_name='waist', position=1.28)
 
@@ -104,7 +104,7 @@ def main():
 
 
             #pull back then go sleep
-            bot.arm.set_ee_cartesian_trajectory(x=-0.1)
+            bot.arm.set_ee_cartesian_trajectory(x=-0.05)
             bot.arm.go_to_sleep_pose()
             
             mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
@@ -140,7 +140,7 @@ def main():
 
             #slide out
             bot.gripper.release()
-            bot.arm.set_ee_cartesian_trajectory(x=-0.1)
+            bot.arm.set_ee_cartesian_trajectory(x=-0.05)
             bot.arm.go_to_sleep_pose()
 
             mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")

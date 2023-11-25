@@ -22,7 +22,16 @@ Then open another terminal, change to this directory and type:
 
     python3 main.py
 """
-
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 def main():
 
@@ -81,7 +90,6 @@ def main():
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.go_to_sleep_pose()
 
-            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
         #MODE 2 Dropoff at Location 1
         elif mode == '2':
@@ -111,8 +119,7 @@ def main():
             bot.arm.set_single_joint_position(joint_name='waist', position=0.0)
             bot.arm.go_to_sleep_pose()
             
-            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
-
+            
         #MODE 3 PICKUP 2
         if mode == '3':
 
@@ -149,7 +156,6 @@ def main():
             bot.arm.set_ee_cartesian_trajectory(x=-0.1)
             bot.arm.go_to_sleep_pose()
 
-            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
         #MODE 4 Dropoff at Location 2
         elif mode == '4':
@@ -179,9 +185,6 @@ def main():
             bot.arm.set_single_joint_position(joint_name='waist', position=0.0)
             bot.arm.go_to_sleep_pose()
             
-            
-            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
-
 
         #MODE 5 SLEEP
         elif mode == '5':
@@ -189,7 +192,6 @@ def main():
             
             bot.arm.go_to_sleep_pose()
 
-            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
         #MODE 6 Gripper test
         elif mode == '6':
@@ -197,18 +199,10 @@ def main():
             bot.gripper.release()            
             bot.arm.go_to_sleep_pose()
 
-            #mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
 
+        else:
 
-        # else:
-
-        #     mode = input("Menu: 1)Pickup 1, 2)Dropoff 1, 3)Pickup 2, 4)Dropoff 2, or 5)SLEEP")
-
-            # if mode != 1 | 2 | 3:
-
-            #     print("Shutting down.")
-            #     bot.arm.go_to_sleep_pose()
-            #     bot.shutdown()
+            print(bcolors.WARNING + "Invalid Entry" + bcolors.ENDC)
 
 
 

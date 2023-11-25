@@ -189,7 +189,6 @@ def main():
         #MODE 5 SLEEP
         elif mode == '5':
 
-            
             bot.arm.go_to_sleep_pose()
 
 

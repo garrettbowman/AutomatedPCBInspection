@@ -55,19 +55,18 @@ Ensure hardware security.
 ## Dependencies
 
 <!-- <img src=images/galac.jpg>  -->
-ROS2 GALACTIC on - May work with other ROS2 versions.
+ROS2 Galactic - May work with other ROS2 versions.
 
 <br />
-
 <!--<img src=images/ros2.png>  -->
 I followed instructions specifically for Trossen X-series Robotic Arms products on Ubuntu 20.04. https://www.trossenrobotics.com/docs/interbotix_xsarms/ros_interface/software_setup.html
 
 <br />
 
-Leica Application Suite - X 
+Leica Application Suite X 
 <br />
 <!-- <img src=images/realsense.png> Realsense D405 Depth Camera or similar  -->
-I also used chrome remote desktop to connect the Linux computer to LAS-X.
+Chrome Remote Desktop or something similar
 
 <br />
   
@@ -106,11 +105,6 @@ It will need to be adjusted to be used correctly.
 
 I reccommend using AHK window spy included in the dashboard for retriving colors, cursor positions, etc.
 
-
-```sh
-python create_model.py data_train.npy corrected_labels.npy --debug
-```
-
 <!-- Performance and Results -->
 ## Performance and Results
 
@@ -119,7 +113,7 @@ Video Demonstration:
 <br />
 
 <p align="center">   
-  [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=ZAKIZniiHFI)
+  (https://www.youtube.com/watch?v=ZAKIZniiHFI)
 </p>
 
 <!-- Authors -->

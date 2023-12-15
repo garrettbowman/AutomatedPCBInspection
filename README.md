@@ -115,7 +115,9 @@ Video Demonstration:
 <br />
 
 <p align="center">   
-  (https://www.youtube.com/watch?v=ZAKIZniiHFI)
+
+https://www.youtube.com/watch?v=ZAKIZniiHFI
+
 </p>
 
 <!-- Authors -->

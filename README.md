@@ -54,22 +54,24 @@ Ensure hardware security.
 
 ## Dependencies
 
-<img src=images/galac.jpg>
- What I used but should work with other ros2 compatible versions.
+<!-- <img src=images/galac.jpg>  -->
+ROS2 GALACTIC on - May work with other ROS2 versions.
 
 <br />
 
-<img src=images/ros2.png>
- I used ROS2 by following instructions specifically for Trossen X-series Robotic Arms products on Ubuntu 20.04. https://www.trossenrobotics.com/docs/interbotix_xsarms/ros_interface/software_setup.html
+<!--<img src=images/ros2.png>  -->
+I followed instructions specifically for Trossen X-series Robotic Arms products on Ubuntu 20.04. https://www.trossenrobotics.com/docs/interbotix_xsarms/ros_interface/software_setup.html
 
 <br />
 
-<img src=images/realsense.png>
-Realsense D405 camera was used for eye in hand camera but other models may work similarly.
+Leica Application Suite - X 
+<br />
+<!-- <img src=images/realsense.png> Realsense D405 Depth Camera or similar  -->
+I also used chrome remote desktop to connect the Linux computer to LAS-X.
 
 <br />
   
-<img src=images/py3.png width=100 height=100>
+<!-- <img src=images/py3.png width=100 height=100>  -->
 
 <br />
 
@@ -77,74 +79,37 @@ Realsense D405 camera was used for eye in hand camera but other models may work 
 
 ## Setup and Usage
 
+***This is assuming you are using Trossen ROS2 Installation***
+
+
 First, clone the repo!AutomatedPCBInspection.git
 cd AutomatedPCBInspection
-```
-<br />
 
-Next, ensure execution of the python scripts is allowed
-```sh
-chmod u+x main.py
-```
-<br />
 
-Next, copy the training imageset to the root of the project directory. The training imageset can be downloaded from 
-[canvas](https://ufl.instructure.com/courses/455012/files/69385213/download) or found in the shared folder when working with HiperGator.
+Open 2 terminals on linux system
 
-<br />
-```sh
-git https://github.com/garrettbowman/
+Always “source  ~/interbotix_ws/install/setup.bash” in terminal before performing any commands or add it to to the end of your ~/.bashrc file.
 
-To train and create the image classification model, one may run
-```sh
-python create_model.py <name of training imageset> <name of training imageset labels>
-```
-<br />
+In one terminal open XSARM Control module with RVIZ
 
-> **Note** **To create a test dataset and its labels from the training set, the --debug flag may be used** <br />
-> * Use of the debug flag is not required and is helpful when only a training dataset is provided <br />
-> * Use of the --debug flag is seen below
-<br />
+"“ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=vx300”"
 
-For example, to create a model with the training images and corrected training labels as well as save a derived test set, one may 
-run
+In other terminal, navigate to AutomatedPCBInspection folder, run the main python script 
+
+"python3 main.py"
+
+You then need to use Chrome remote desktop or similar program to control linux computer from computer running LASX.
+
+The AHK script I created is specifically for my workstation
+
+It will need to be adjusted to be used correctly.
+
+I reccommend using AHK window spy included in the dashboard for retriving colors, cursor positions, etc.
+
+
 ```sh
 python create_model.py data_train.npy corrected_labels.npy --debug
 ```
-<br />
-
-The script will output an image classification model in the h5 format, "image_model.h5" when it has ran successfully.
-<br />
-<br />
-
-> **Note** **To use a pre-existing model, simply:**
-> * Skip execution of the create_model.sh
-> * Copy your model file to the root of the project directory
-> * Specify your model file when running "evaluate_model_performance.py" as seen below
-<br />
-
-To evaluate the model's performance against a user-specified training or testing image set, one may run
-```sh
-python evaluate_model_performance.py <filename of dataset> <filename of dataset labels <filename of model.h>
-```
-<br />
-
-> **Warning** **The evaluate_model_performance.py script EXPECTS that the dataset specified is in following format** <br />
-> * 270,000 x M (numpy array, where M is the number of test samples)
-<br />
-
-For example, to evaulate the performance of the model with the debug test set generated above, one may run
-```sh
-python evaluate_model_performance.py debug/X_test_from_training.npy debug/X_test_from_training_labels.npy image_model.h5
-```
-<br />
-<br />
-
-*A jupyter notebook,* 'Final Project - Training and Testing Examples.ipynb' *has also been included in this repo. This 
-notebook 
-includes example code to run the test and train scripts detailed above.*
-
-<br />
 
 <!-- Performance and Results -->
 ## Performance and Results
@@ -154,7 +119,7 @@ Video Demonstration:
 <br />
 
 <p align="center">   
-  https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=ZAKIZniiHFI)
 </p>
 
 <!-- Authors -->

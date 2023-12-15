@@ -52,9 +52,10 @@ A prototype.
 
 <!-- (more information and explanation may be added here) -->
 
-
-<!-- Dependencies -->
 <br />
+<!-- Dependencies -->
+
+
 ## Dependencies
 
 <!-- <img src=images/galac.jpg>  -->

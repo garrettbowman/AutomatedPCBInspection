@@ -112,11 +112,9 @@ There might be a better way to do this using perception/point clouds but I prefe
 
 Video Demonstration:
 
-<br />
-
 <p align="center">   
 
-https://www.youtube.com/watch?v=ZAKIZniiHFI
+  https://www.youtube.com/watch?v=ZAKIZniiHFI
 
 </p>
 

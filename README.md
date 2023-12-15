@@ -110,6 +110,10 @@ It will need to be adjusted to be used correctly.
 
 I reccommend using AHK window spy included in the dashboard for retriving colors, cursor positions, etc.
 
+To make changes to robotic script, I would reccommend subscribing to joint states topic, adjusting arm to where you want using control panel (enabling/disabling torque for each joint).
+
+There might be a "better" way to do this using perception/point clouds but I prefered serial movement to avoid damaging expensive equipment.
+
 <!-- Performance and Results -->
 ## Performance and Results
 

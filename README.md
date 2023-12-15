@@ -36,20 +36,16 @@
 Ensure hardware security, reduce costs and save time.
 
 A prototype.
-
 <br />
 
 <!--
 <p align="center">
     DFgdfgwlkjgowdfglwfdg
-    <br />
-    <br />
     <img src=images/eye.png width=432 height=288>
 </p>
 -->
 
 <!-- (more information and explanation may be added here) -->
-
 <br />
 
 <!-- Dependencies -->

@@ -33,19 +33,22 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Ensure hardware security.
+Ensure hardware security, reduce cost of hiring subject matter experts and save money.
+
+A prototype.
 
 <br />
 
 <br />
 
+<!--
 <p align="center">
     DFgdfgwlkjgowdfglwfdg
     <br />
     <br />
     <img src=images/eye.png width=432 height=288>
 </p>
-
+-->
 
 <!-- (more information and explanation may be added here) -->
 

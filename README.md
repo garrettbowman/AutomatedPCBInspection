@@ -54,7 +54,7 @@ A prototype.
 
 
 <!-- Dependencies -->
-
+<br />
 ## Dependencies
 
 <!-- <img src=images/galac.jpg>  -->
@@ -65,8 +65,11 @@ ROS2 Galactic - May work with other ROS2 versions.
 I followed instructions specifically for Trossen X-series Robotic Arms products on Ubuntu 20.04. https://www.trossenrobotics.com/docs/interbotix_xsarms/ros_interface/software_setup.html
 
 <br />
+<br />
+<br />
 
 Leica Application Suite X 
+
 <br />
 <!-- <img src=images/realsense.png> Realsense D405 Depth Camera or similar  -->
 Chrome Remote Desktop or something similar

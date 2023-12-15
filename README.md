@@ -51,6 +51,7 @@ A prototype.
 <!-- (more information and explanation may be added here) -->
 
 <br />
+
 <!-- Dependencies -->
 ## Dependencies
 

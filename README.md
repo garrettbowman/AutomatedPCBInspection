@@ -81,10 +81,9 @@ Chrome Remote Desktop or something similar
 ***This is assuming you are using Trossen ROS2 Installation***
 
 
-First, clone the repo!
+First, clone the repo
 
 AutomatedPCBInspection.git
-cd AutomatedPCBInspection
 
 Open 2 terminals on linux system
 
@@ -92,7 +91,7 @@ Always “source  ~/interbotix_ws/install/setup.bash” in terminal before perfo
 
 In one terminal open XSARM Control module with RVIZ
 
-"“ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=vx300”"
+"ros2 launch interbotix_xsarm_control xsarm_control.launch.py robot_model:=vx300”
 
 In other terminal, navigate to AutomatedPCBInspection folder, run the main python script 
 
@@ -100,15 +99,13 @@ In other terminal, navigate to AutomatedPCBInspection folder, run the main pytho
 
 You then need to use Chrome remote desktop or similar program to control linux computer from computer running LASX.
 
-The AHK script I created is specifically for my workstation
-
-It will need to be adjusted to be used correctly.
+The AHK script I created is specifically for my workstation; It will need to be adjusted.
 
 I reccommend using AHK window spy included in the dashboard for retriving colors, cursor positions, etc.
 
 To make changes to robotic script, I would reccommend subscribing to joint states topic, adjusting arm to where you want using control panel (enabling/disabling torque for each joint).
 
-There might be a "better" way to do this using perception/point clouds but I prefered serial movement to avoid damaging expensive equipment.
+There might be a better way to do this using perception/point clouds but I prefered serial movement to avoid damaging expensive equipment.
 
 <!-- Performance and Results -->
 ## Performance and Results
@@ -140,9 +137,6 @@ Project Link: [https://github.com/garrettbowman/AutomatedPCBInspection.git](http
 
 If you made it this far, thank you for reading!
 
-<br />
-<br />
-<br />
 <br />
 This README was proudly written 100% with nano :)
 

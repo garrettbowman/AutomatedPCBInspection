@@ -33,11 +33,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Ensure hardware security, reduce cost of hiring subject matter experts and save money.
+Ensure hardware security, reduce costs and save time.
 
 A prototype.
-
-<br />
 
 <br />
 
@@ -54,8 +52,6 @@ A prototype.
 
 <br />
 <!-- Dependencies -->
-
-
 ## Dependencies
 
 <!-- <img src=images/galac.jpg>  -->
@@ -88,9 +84,10 @@ Chrome Remote Desktop or something similar
 ***This is assuming you are using Trossen ROS2 Installation***
 
 
-First, clone the repo!AutomatedPCBInspection.git
-cd AutomatedPCBInspection
+First, clone the repo!
 
+AutomatedPCBInspection.git
+cd AutomatedPCBInspection
 
 Open 2 terminals on linux system
 

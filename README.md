@@ -131,8 +131,8 @@ Project Link: [https://github.com/garrettbowman/AutomatedPCBInspection.git](http
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Dr. Navid Asadi](https://faculty.eng.ufl.edu/catia-silva/) - Faculty Advisor
-* [Patrick Craig](https://faculty.eng.ufl.edu/catia-silva/) - Mentor
+* [Dr. Navid Asadi]() - Faculty Advisor
+* [Patrick Craig]() - Mentor
 * [Catia Silva](https://faculty.eng.ufl.edu/catia-silva/) - Created readme template
 
 ## Thank you
